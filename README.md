@@ -1,1 +1,1 @@
-# CS121_Project_4
+# Horse Race using OOP
