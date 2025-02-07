@@ -22,13 +22,14 @@ void Horse::advance() {
 } // End advance
 
 void Horse::printLane() {
-	for (int i = 0; i < Horse::trackLength; i++) {
+	for (int i = 0; i < 15; i++) {
 		if (i == Horse::position) {
 			std::cout << Horse::id << " ";
 		} else {
 			std::cout << ". ";
 		} // End if statement
 	} // End for loop
+	std::cout << std::endl;
 } // End printLane
 
 bool Horse::isWinner() {

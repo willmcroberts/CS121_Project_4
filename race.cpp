@@ -7,9 +7,12 @@
 
 
 Race::Race() {
-	Horse* horses[5] = {0};
-	const static int trackLength = 15;
-	const static int numHorses = 5;	
+	Race::trackLength;
+	Race::numHorses;
+	for (int i = 0; i < numHorses; i++) {
+		Race::horses[i];
+		Race::horses[i].init(i, trackLength);
+	} // End for loop
 }; // End Constructor
 
 void Race::run() {
@@ -17,7 +20,7 @@ void Race::run() {
 	bool keepGoing = true;
 
 	while (keepGoing) {
-		for (int i = 0; i < Race::numHorses; i++) {
+		for (int i = 0; i < 5; i++) {
 			horses[i].advance();
 			horses[i].printLane();
 			if (horses[i].isWinner()) {

@@ -1,11 +1,10 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include "horse.h"
 #include "race.h"
 
 int main() {
-	std::cout << "Hello World" << std::endl;
+	Race c;
+	c.run();
 
 	return 0;
-}
+} // End main
