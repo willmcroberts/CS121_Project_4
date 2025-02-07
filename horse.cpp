@@ -16,8 +16,27 @@ void Horse::init(int id, int trackLength) {
 	Horse::trackLength = trackLength;
 } // End init
 
-
-void advance() {
+void Horse::advance() {
 	int coin = rand() % 2;
 	Horse::position += coin;
 } // End advance
+
+void Horse::printLane() {
+	for (int i = 0; i < Horse::trackLength; i++) {
+		if (i == Horse::position) {
+			std::cout << Horse::id << " ";
+		} else {
+			std::cout << ". ";
+		} // End if statement
+	} // End for loop
+} // End printLane
+
+bool Horse::isWinner() {
+	bool result = false;
+	if (Horse::position >= Horse::trackLength) {
+		result = true;
+		std::cout << "HORSE " << Horse::id << " WINS!!!" << std::endl;
+	} // End if statement
+
+	return result;
+} // End isWinner
